@@ -14,7 +14,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 }
 
 .top-form{
-    -fx-background-color:#fff;
+    -fx-background-color: #ddd;
     -fx-border-color:#000;
     -fx-border-width:.4px .4px .4px 0px;
 }

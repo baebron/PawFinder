@@ -45,14 +45,14 @@
             </AnchorPane>
             <HBox prefHeight="34.0" prefWidth="993.0" styleClass="top-form" stylesheets="@loginDesign.css">
                <children>
-                  <AnchorPane prefHeight="34.0" prefWidth="801.0">
+                  <AnchorPane prefHeight="34.0" prefWidth="1100.0">
                      <children>
-                        <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="869.0" mnemonicParsing="false" onMouseClicked="#min" prefHeight="31.0" prefWidth="40.0" styleClass="close" />
-                        <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="909.0" layoutY="1.0" mnemonicParsing="false" onMouseClicked="#max" prefHeight="31.0" prefWidth="42.0" styleClass="minimize" stylesheets="@loginDesign.css" />
-                        <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="942.0" mnemonicParsing="false" onMouseClicked="#close" prefHeight="31.0" prefWidth="52.0" styleClass="minimize" stylesheets="@loginDesign.css" />
-                        <FontAwesomeIconView glyphName="MINUS" layoutX="883.0" layoutY="24.0" onMouseClicked="#min" size="1.5em" />
-                        <FontAwesomeIconView glyphName="SQUARE" layoutX="923.0" layoutY="22.0" onMouseClicked="#max" size="1.2em" />
-                        <FontAwesomeIconView glyphName="CLOSE" layoutX="961.0" layoutY="21.0" onMouseClicked="#close" size="1.5em" />
+                        <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="883.0" mnemonicParsing="false" onMouseClicked="#min" prefHeight="31.0" prefWidth="40.0" styleClass="close" />
+                        <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="920.0" layoutY="1.0" mnemonicParsing="false" onMouseClicked="#max" prefHeight="31.0" prefWidth="42.0" styleClass="minimize" stylesheets="@loginDesign.css" />
+                        <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="955.0" mnemonicParsing="false" onMouseClicked="#close" prefHeight="31.0" prefWidth="47.0" styleClass="minimize" stylesheets="@loginDesign.css" />
+                        <FontAwesomeIconView glyphName="MINUS" layoutX="898.0" layoutY="24.0" onMouseClicked="#min" size="1.5em" />
+                        <FontAwesomeIconView glyphName="SQUARE" layoutX="936.0" layoutY="22.0" onMouseClicked="#max" size="1.2em" />
+                        <FontAwesomeIconView glyphName="CLOSE" layoutX="968.0" layoutY="23.0" onMouseClicked="#close" size="1.5em" />
                         <FontAwesomeIconView glyphName="PAW" layoutX="11.0" layoutY="25.0" size="2em" />
                         <Label layoutX="41.0" layoutY="8.0" text="PawFInder Login">
                            <font>

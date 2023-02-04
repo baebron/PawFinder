@@ -24,6 +24,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
@@ -44,6 +45,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
@@ -91,6 +93,9 @@ public class dashboardController implements Initializable {
     @FXML
     private BarChart<?, ?> home_chart;
 
+    @FXML
+        private Label title;
+    
     @FXML
     private AnchorPane availableFlowers_form;
 
@@ -144,6 +149,28 @@ public class dashboardController implements Initializable {
 
     @FXML
     private AnchorPane purchase_form;
+    
+    @FXML
+    private HBox cats_form;
+       
+    @FXML
+    private HBox donate_form;
+    
+    @FXML
+    private HBox contactA_form;
+    
+    @FXML
+    private HBox aboutUs_form;
+    
+    
+    @FXML
+    private HBox homeDash_form;
+        
+    @FXML
+    private Button contactBtn;
+
+    @FXML
+    private Button aboutBtn;
 
     @FXML
     private ComboBox<?> purchase_flowerID;
@@ -177,6 +204,12 @@ public class dashboardController implements Initializable {
 
     @FXML
     private TableColumn<customerData, String> purchase_col_price;
+    
+    @FXML
+    private AnchorPane contact_form;
+
+    @FXML
+    private AnchorPane about_form;
 
     private Connection connect;
     private PreparedStatement prepare;
@@ -886,9 +919,19 @@ public class dashboardController implements Initializable {
 
     public void switchForm(ActionEvent event) {
         if (event.getSource() == home_btn ) {
+        
+            homeDash_form.setVisible(true);
+            cats_form.setVisible(false);
+            donate_form.setVisible(false);
+            contactA_form.setVisible(false);
+            aboutUs_form.setVisible(false);
+        
+            title.setVisible(true);
             home_form.setVisible(true);
             availableFlowers_form.setVisible(false);
             purchase_form.setVisible(false);
+             contact_form.setVisible(false);
+            about_form.setVisible(false);
 
             home_btn.setStyle("-fx-background-color:linear-gradient(to bottom right,#4f937a, #6e2731)");
             availableFlowers_btn.setStyle("-fx-background-color: transparent");
@@ -900,9 +943,18 @@ public class dashboardController implements Initializable {
             homeChart();
             
         } else if (event.getSource() == availableFlowers_btn) {
+            
+            homeDash_form.setVisible(false);
+            cats_form.setVisible(true);
+            donate_form.setVisible(false);
+            contactA_form.setVisible(false);
+            aboutUs_form.setVisible(false);
+            
             home_form.setVisible(false);
             availableFlowers_form.setVisible(true);
             purchase_form.setVisible(false);
+             contact_form.setVisible(false);
+            about_form.setVisible(false);
 
             availableFlowers_btn.setStyle("-fx-background-color:linear-gradient(to bottom right,#4f937a, #6e2731)");
             home_btn.setStyle("-fx-background-color: transparent");
@@ -914,9 +966,18 @@ public class dashboardController implements Initializable {
             availableFlowersSearch();
 
         } else if (event.getSource() == purchase_btn) {
+            
+            homeDash_form.setVisible(false);
+            cats_form.setVisible(false);
+            donate_form.setVisible(true);
+            contactA_form.setVisible(false);
+            aboutUs_form.setVisible(false);
+            
             home_form.setVisible(false);
             availableFlowers_form.setVisible(false);
             purchase_form.setVisible(true);
+             contact_form.setVisible(false);
+            about_form.setVisible(false);
 
             purchase_btn.setStyle("-fx-background-color:linear-gradient(to bottom right,#4f937a, #6e2731)");
             availableFlowers_btn.setStyle("-fx-background-color: transparent");
@@ -927,6 +988,45 @@ public class dashboardController implements Initializable {
             purchaseFlowerName();
             purchaseSpinner();
             purchaseDisplayTotal();
+
+        } else if (event.getSource() == contactBtn) {
+            
+            homeDash_form.setVisible(false);
+            cats_form.setVisible(false);
+            donate_form.setVisible(false);
+            contactA_form.setVisible(true);
+            aboutUs_form.setVisible(false);
+            
+            home_form.setVisible(false);
+            availableFlowers_form.setVisible(false);
+            purchase_form.setVisible(false);
+            contact_form.setVisible(true);
+            about_form.setVisible(false);
+
+            purchase_btn.setStyle("-fx-background-color:linear-gradient(to bottom right,#4f937a, #6e2731)");
+            availableFlowers_btn.setStyle("-fx-background-color: transparent");
+            home_btn.setStyle("-fx-background-color: transparent");
+
+            
+
+        } else if (event.getSource() == aboutBtn) {
+            homeDash_form.setVisible(false);
+            cats_form.setVisible(false);
+            donate_form.setVisible(false);
+            contactA_form.setVisible(false);
+            aboutUs_form.setVisible(true);
+            
+            home_form.setVisible(false);
+            availableFlowers_form.setVisible(false);
+            purchase_form.setVisible(false);
+            contact_form.setVisible(false);
+            about_form.setVisible(true);
+
+            purchase_btn.setStyle("-fx-background-color:linear-gradient(to bottom right,#4f937a, #6e2731)");
+            availableFlowers_btn.setStyle("-fx-background-color: transparent");
+            home_btn.setStyle("-fx-background-color: transparent");
+
+            
 
         }
 
@@ -981,13 +1081,32 @@ public class dashboardController implements Initializable {
 
     }
 
-    public void close() {
-        System.exit(0);
+//    public void close() {
+//        System.exit(0);
+//    }
+//
+//    public void minimize() {
+//        Stage stage = (Stage) main_form.getScene().getWindow();
+//        stage.setIconified(true);
+//    }
+    
+    @FXML
+    void close(MouseEvent event) {
+        Stage s = (Stage)((Node)event.getSource()).getScene().getWindow();
+        s.close();
     }
 
-    public void minimize() {
-        Stage stage = (Stage) main_form.getScene().getWindow();
-        stage.setIconified(true);
+
+    @FXML
+    void max(MouseEvent event) {
+        Stage s = (Stage)((Node)event.getSource()).getScene().getWindow();
+        s.setIconified(true);
+    }
+
+    @FXML
+    void min(MouseEvent event) {
+        Stage s = (Stage)((Node)event.getSource()).getScene().getWindow();
+        s.setIconified(true);
     }
 
     @Override

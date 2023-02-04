@@ -1,0 +1,72 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jan 30, 2023, 4:22:57 PM
+    Author     : Advincula
+*/
+
+.left-form{
+    -fx-background-color:linear-gradient(to bottom right,#4f937a, #6e2731);
+    -fx-border-color:#000;
+    -fx-border-width:.4px 0px .4px .4px;
+}
+
+.top-form{
+    -fx-background-color: #ddd;
+    -fx-border-color:#000;
+    -fx-border-width:.4px .4px .4px 0px;
+}
+
+.right-form{
+    -fx-background-color:#f1ebeb;
+    -fx-border-color:#000;
+    -fx-border-width:.4px .4px .4px 0px;
+}
+
+.close{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+}
+
+.close:hover{
+    -fx-background-color:#ff4f6c;
+}
+
+.minimize{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+}
+.minimize:hover{
+    -fx-background-color: #ddd;
+}
+
+
+.textfield{
+    -fx-background-color:#f1ebeb;
+    -fx-background-radius:4px;
+    -fx-border-color:#000;
+    -fx-border-width:.4px;
+    -fx-border-radius:4px;
+    -fx-font-size:18px;
+    -fx-font-family:"Tahoma";
+}
+
+.textfield:focused{
+    -fx-border-color:linear-gradient(to bottom right,#4f937a, #6e2731);
+    -fx-border-width:1.4px;
+}
+
+.login-btn{
+    -fx-background-color:linear-gradient(to bottom right,#4f8c7d, #33504c);
+    -fx-border-radius:4px;
+    -fx-cursor:hand;
+    -fx-text-fill:#fff;
+    -fx-font-size:19px;
+    -fx-font-family:"Arial";
+}
+
+.login-btn:hover{
+    -fx-background-color:linear-gradient(to bottom,#54ae96, #55867e);
+}

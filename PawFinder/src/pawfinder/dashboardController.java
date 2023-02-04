@@ -885,8 +885,7 @@ public class dashboardController implements Initializable {
     }
 
     public void switchForm(ActionEvent event) {
-
-        if (event.getSource() == home_btn) {
+        if (event.getSource() == home_btn ) {
             home_form.setVisible(true);
             availableFlowers_form.setVisible(false);
             purchase_form.setVisible(false);

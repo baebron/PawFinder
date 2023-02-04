@@ -13,6 +13,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -35,8 +36,11 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private AnchorPane main_form;
     
-    @FXML
-    private Button minimize;
+//    @FXML
+//    private Button minimize;
+    
+//    @FXML
+//    private Button maximize;
 
     @FXML
     private TextField username;
@@ -47,8 +51,8 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Button loginBtn;
 
-    @FXML
-    private Button close;
+//    @FXML
+//    private Button close;
     
 //    DATABASE TOOLS
     private Connection connect;
@@ -128,14 +132,38 @@ public class FXMLDocumentController implements Initializable {
         
     }
     
-    public void minimize() {
-        Stage stage = (Stage) main_form.getScene().getWindow();
-        stage.setIconified(true);
+//    public void minimize() {
+//        Stage stage = (Stage) main_form.getScene().getWindow();
+//        stage.setIconified(true);
+//    }
+    
+    @FXML
+    void close(MouseEvent event) {
+        Stage s = (Stage)((Node)event.getSource()).getScene().getWindow();
+        s.close();
+    }
+
+
+    @FXML
+    void max(MouseEvent event) {
+        Stage s = (Stage)((Node)event.getSource()).getScene().getWindow();
+        s.setIconified(true);
+    }
+
+    @FXML
+    void min(MouseEvent event) {
+        Stage s = (Stage)((Node)event.getSource()).getScene().getWindow();
+        s.setIconified(true);
     }
     
-    public void close(){
-        System.exit(0);
-    }
+//     public void maximize() {
+//        Stage stage = (Stage) main_form.getScene().getWindow();
+//        stage.setIconified(true);
+//    }
+//     
+//    public void close(){
+//        System.exit(0);
+//    }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

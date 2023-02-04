@@ -6,6 +6,8 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -22,16 +24,6 @@
                         <Font name="Lucida Handwriting Italic" size="36.0" />
                      </font>
                   </Label>
-                  <AnchorPane prefHeight="33.0" prefWidth="1000.0" styleClass="top-form" stylesheets="@loginDesign.css">
-                     <children>
-                        <FontAwesomeIconView glyphName="PAW" layoutX="14.0" layoutY="23.0" size="1.5em" />
-                        <Label layoutX="39.0" layoutY="7.0" text="PawFinder Login">
-                           <font>
-                              <Font name="Tahoma" size="14.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
                </children>
             </AnchorPane>
             <AnchorPane layoutX="500.0" layoutY="2.0" prefHeight="700.0" prefWidth="500.0" styleClass="right-form" stylesheets="@loginDesign.css">
@@ -49,20 +41,34 @@
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Button>
-                  <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="30.0" prefWidth="500.0" styleClass="top-form" stylesheets="@loginDesign.css">
-                     <children>
-                        <Button fx:id="minimize" layoutX="427.0" layoutY="2.0" mnemonicParsing="false" onAction="#minimize" prefHeight="0.0" prefWidth="38.0" styleClass="minimize" stylesheets="@loginDesign.css">
-                           <graphic>
-                              <FontAwesomeIconView glyphName="MINUS" size="1.2em" />
-                           </graphic>
-                        </Button>
-                     </children></AnchorPane>
-                  <Button fx:id="close" layoutX="459.0" layoutY="-3.0" mnemonicParsing="false" onAction="#close" prefHeight="20.0" prefWidth="40.0" styleClass="close" />
-                  <FontAwesomeIconView glyphName="CLOSE" layoutX="475.0" layoutY="19.0" size="1.2em" />
                   <Text layoutX="222.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up here" />
                </children>
             </AnchorPane>
          </children>
       </AnchorPane>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <HBox prefHeight="34.0" prefWidth="993.0" styleClass="top-form" stylesheets="@loginDesign.css" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="34.0" prefWidth="801.0">
+                     <children>
+                        <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="869.0" mnemonicParsing="false" onMouseClicked="#min" prefHeight="31.0" prefWidth="40.0" styleClass="close" />
+                        <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="909.0" layoutY="1.0" mnemonicParsing="false" onMouseClicked="#max" prefHeight="31.0" prefWidth="42.0" styleClass="minimize" stylesheets="@loginDesign.css" />
+                        <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="942.0" mnemonicParsing="false" onMouseClicked="#close" prefHeight="31.0" prefWidth="52.0" styleClass="minimize" stylesheets="@loginDesign.css" />
+                        <FontAwesomeIconView glyphName="MINUS" layoutX="883.0" layoutY="24.0" onMouseClicked="#min" size="1.5em" />
+                        <FontAwesomeIconView glyphName="SQUARE" layoutX="923.0" layoutY="22.0" onMouseClicked="#max" size="1.2em" />
+                        <FontAwesomeIconView glyphName="CLOSE" layoutX="961.0" layoutY="21.0" onMouseClicked="#close" size="1.5em" />
+                        <FontAwesomeIconView glyphName="PAW" layoutX="11.0" layoutY="25.0" size="2em" />
+                        <Label layoutX="41.0" layoutY="8.0" text="PawFInder Login">
+                           <font>
+                              <Font name="Tahoma" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
    </children>
 </StackPane>

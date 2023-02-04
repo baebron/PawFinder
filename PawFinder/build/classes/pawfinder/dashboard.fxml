@@ -15,6 +15,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
@@ -25,30 +26,7 @@
          <children>
             <BorderPane layoutX="172.0" layoutY="228.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <top>
-                  <AnchorPane prefHeight="40.0" prefWidth="1100.0" styleClass="semi-top-form" stylesheets="@dashboardDesign.css" BorderPane.alignment="CENTER">
-                     <children>
-                        <AnchorPane layoutY="-3.0" prefHeight="35.0" prefWidth="1100.0" styleClass="top-form" stylesheets="@dashboardDesign.css" AnchorPane.topAnchor="0.0">
-                           <children>
-                              <FontAwesomeIconView glyphName="PAW" layoutX="14.0" layoutY="23.0" size="1.5em" />
-                              <Label layoutX="39.0" layoutY="9.0" text="PawFinder Dashboard">
-                                 <font>
-                                    <Font name="Tahoma" size="14.0" />
-                                 </font>
-                              </Label>
-                              <Button fx:id="close" layoutX="1033.0" layoutY="2.0" mnemonicParsing="false" onAction="#close" prefHeight="24.0" prefWidth="53.0" styleClass="close" stylesheets="@dashboardDesign.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
-                                 <graphic>
-                                    <FontAwesomeIconView glyphName="CLOSE" size="1.2em" />
-                                 </graphic>
-                              </Button>
-                              <Button fx:id="minimize" layoutX="1001.0" layoutY="2.0" mnemonicParsing="false" onAction="#minimize" prefHeight="24.0" prefWidth="44.0" styleClass="minimize" stylesheets="@dashboardDesign.css">
-                                 <graphic>
-                                    <FontAwesomeIconView glyphName="MINUS" size="1.2em" />
-                                 </graphic>
-                              </Button>
-                           </children>
-                        </AnchorPane>
-                     </children>
-                  </AnchorPane>
+                  <AnchorPane prefHeight="40.0" prefWidth="1100.0" styleClass="semi-top-form" stylesheets="@dashboardDesign.css" BorderPane.alignment="CENTER" />
                </top>
                <left>
                   <AnchorPane prefHeight="555.0" prefWidth="204.0" styleClass="nav-form" stylesheets="@dashboardDesign.css" BorderPane.alignment="CENTER">
@@ -175,7 +153,7 @@
                         </AnchorPane>
                         <AnchorPane fx:id="availableFlowers_form" layoutX="139.0" layoutY="133.0" prefHeight="560.0" prefWidth="897.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="533.0" prefWidth="252.0" stylesheets="@dashboardDesign.css">
+                              <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="636.0" prefWidth="252.0" stylesheets="@dashboardDesign.css">
                                  <styleClass>
                                     <String fx:value="white-bg" />
                                     <String fx:value="shadow" />
@@ -221,7 +199,7 @@
                                     <TextField fx:id="availableFlowers_price" layoutX="23.0" layoutY="392.0" prefHeight="25.0" prefWidth="207.0" promptText="\$0.0" styleClass="textfield" stylesheets="@dashboardDesign.css" />
                                  </children>
                               </AnchorPane>
-                              <AnchorPane layoutX="285.0" layoutY="14.0" prefHeight="533.0" prefWidth="598.0" stylesheets="@dashboardDesign.css">
+                              <AnchorPane layoutX="285.0" layoutY="14.0" prefHeight="638.0" prefWidth="598.0" stylesheets="@dashboardDesign.css">
                                  <styleClass>
                                     <String fx:value="white-bg" />
                                     <String fx:value="shadow" />
@@ -229,7 +207,7 @@
                                  <children>
                                     <TextField fx:id="availableFlowers_search" layoutX="14.0" layoutY="14.0" onKeyTyped="#availableFlowersSearch" prefHeight="30.0" prefWidth="304.0" promptText="Search" styleClass="search" stylesheets="@dashboardDesign.css" />
                                     <FontAwesomeIconView glyphName="SEARCH" layoutX="21.0" layoutY="35.0" size="1.5em" />
-                                    <TableView fx:id="availableFlowers_tableView" layoutX="11.0" layoutY="59.0" onMouseClicked="#availableFlowersSelect" prefHeight="460.0" prefWidth="577.0">
+                                    <TableView fx:id="availableFlowers_tableView" layoutX="11.0" layoutY="59.0" onMouseClicked="#availableFlowersSelect" prefHeight="569.0" prefWidth="577.0">
                                       <columns>
                                         <TableColumn fx:id="availableFlowers_col_flowerID" prefWidth="117.0" text="Flower ID" />
                                         <TableColumn fx:id="availableFlowers_col_flowerName" prefWidth="207.0" text="Flower Name" />
@@ -243,7 +221,7 @@
                         </AnchorPane>
                         <AnchorPane fx:id="purchase_form" layoutX="94.0" layoutY="106.0" prefHeight="560.0" prefWidth="897.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <AnchorPane layoutX="15.0" layoutY="15.0" prefHeight="531.0" prefWidth="868.0" stylesheets="@dashboardDesign.css">
+                              <AnchorPane layoutX="15.0" layoutY="15.0" prefHeight="638.0" prefWidth="868.0" stylesheets="@dashboardDesign.css">
                                  <styleClass>
                                     <String fx:value="white-bg" />
                                     <String fx:value="shadow" />
@@ -287,7 +265,7 @@
                                           <Button fx:id="purchase_addCart" layoutX="54.0" layoutY="166.0" mnemonicParsing="false" onAction="#purchaseAddToCart" prefHeight="35.0" prefWidth="116.0" styleClass="add-btn" stylesheets="@dashboardDesign.css" text="Add to Cart" />
                                        </children>
                                     </AnchorPane>
-                                    <TableView fx:id="purchase_tableView" layoutX="17.0" layoutY="230.0" prefHeight="287.0" prefWidth="835.0">
+                                    <TableView fx:id="purchase_tableView" layoutX="17.0" layoutY="230.0" prefHeight="395.0" prefWidth="835.0">
                                       <columns>
                                         <TableColumn fx:id="purchase_col_flowerID" prefWidth="157.0" text="Flower ID" />
                                         <TableColumn fx:id="purchase_col_flowerName" prefWidth="305.0" text="Flower Name" />
@@ -305,5 +283,29 @@
             </BorderPane>
          </children>
       </AnchorPane>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <HBox prefHeight="34.0" prefWidth="993.0" styleClass="top-form" stylesheets="@loginDesign.css" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="34.0" prefWidth="801.0">
+                     <children>
+                        <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="974.0" mnemonicParsing="false" onMouseClicked="#min" prefHeight="31.0" prefWidth="40.0" styleClass="close" />
+                        <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="1014.0" layoutY="1.0" mnemonicParsing="false" onMouseClicked="#max" prefHeight="31.0" prefWidth="42.0" styleClass="minimize" stylesheets="@loginDesign.css" />
+                        <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="1046.0" mnemonicParsing="false" onMouseClicked="#close" prefHeight="31.0" prefWidth="46.0" styleClass="minimize" stylesheets="@loginDesign.css" />
+                        <FontAwesomeIconView glyphName="MINUS" layoutX="988.0" layoutY="24.0" onMouseClicked="#min" size="1.5em" />
+                        <FontAwesomeIconView glyphName="SQUARE" layoutX="1028.0" layoutY="22.0" onMouseClicked="#max" size="1.2em" />
+                        <FontAwesomeIconView glyphName="CLOSE" layoutX="1062.0" layoutY="24.0" onMouseClicked="#close" size="1.5em" />
+                        <FontAwesomeIconView glyphName="PAW" layoutX="5.0" layoutY="25.0" size="2em" />
+                        <Label layoutX="38.0" layoutY="6.0" text="PawFInder Dashboard">
+                           <font>
+                              <Font name="Tahoma" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
    </children>
 </StackPane>
